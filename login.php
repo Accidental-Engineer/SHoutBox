@@ -1,12 +1,13 @@
 <link rel="stylesheet" type="text/css" href="style2.css"/>
 <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css"/>
-
+<link rel="icon" href="shoutbox_logo_invert.png"/>
 <?php
   include "session.php";
   if(!($username && $password && $fname))
   {
  $form = "
-
+<head>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'/></head>
  <div class='innerdiv'>
     <h1 id='welcome' >WELCOME TO SHoutBox<span id='beta'>Beta</span></h1>
                 <form action='login1.php' method='post' id='myForm'>

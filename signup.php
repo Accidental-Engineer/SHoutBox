@@ -1,6 +1,7 @@
 
 <link rel="stylesheet" type="text/css" href="style2.css"/>
 <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css"/>
+<link rel="icon" href="shoutbox_logo_invert.png"/>
 <script src="script2.js"></script>
 <?php
   include "session.php";
@@ -9,14 +10,15 @@
 
  $form = "
 
-
+<head>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'/>
 </head>
 <body>
  <div class='innerdiv'>
 
                 <form onsubmit='return checkForm()' action='signup1.php' method='post' id='myForm'>
                     <h3><i class='fa fa-user-plus' aria-hidden='true'></i> Signup</h3>
-                    <table>
+                    <table >
                         <tr>
                             <td><lable class='la'>First Name :<lable></td>
                             <td><input class='in'type='text' name='fname' id='fname1' onblur='validate(this.name, this.value)'></td>
@@ -47,7 +49,7 @@
                             <td><input class='in' type='text' name='email' id='email1' onblur='validate(this.name, this.value)'></td>
                             <td><div class='error' id='email'></div></td>
                         </tr>
-                      <tr ><td colspan=3 align='center'><input type='submit' name = 'submit'  value='Sign Up'></td></tr>
+                      <tr ><td colspan=3 rowspan='2' align='center'><input type='submit' name = 'submit'  value='Sign Up'></td></tr>
                     </table>
                       <h4 id='log'>Already have an account? <a href='login.php'> Login!</a></h4>
             </div>

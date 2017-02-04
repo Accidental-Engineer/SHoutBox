@@ -56,12 +56,30 @@ body{
 .heading1 a{
   text-decoration: none;
   color: #e6e6e6;
+  padding-right: 3px;
   text-shadow: 0px 0px 2px #b3b3b3;
 }
 .heading1 a:hover{
 
   color: #b3e6ff;
   text-shadow: 0px 0px 5px #b3b3b3;
+}
+#logo{
+  position: relative;
+  top:10px;
+  font-family: "AR DESTINE";
+  font-size: 20px;
+  margin: auto;
+  margin-left: 9px;
+}
+#logoimg{
+  width:40px;
+  height: 40px;
+  float: left;
+  border-radius: 500px;
+  border: 2px solid transparent;
+  overflow: hidden;
+  box-shadow: 0 0 15px #99ffff;
 }
 #shouts{
   width: 95%;
@@ -152,7 +170,7 @@ box-shadow: 0px 1px 5px  #009688;
   color: white;
   font-size: 9px;
   position: relative;
-  top:-14px;
+  top:2px;
   font-style: oblique;
 }
 #about{
@@ -202,7 +220,10 @@ box-shadow: 0px 1px 5px  #009688;
   text-shadow: 0px 0px 5px green;
 }
 
-
+@font-face{
+  font-family: ARDESTINE ;
+  src:url(ARDESTINE.ttf);
+}
 @media screen and (max-width: 768px){
 html,body{
   width: 100%
@@ -211,7 +232,7 @@ html,body{
     width: 100%;
     margin: 0px;
     padding: 0px;
-box-shadow:0px 0px 0px 0px white;
+  box-shadow:0px 4px 10px 1px white;
   }
   .head{
     background: #009688;
@@ -229,12 +250,31 @@ box-shadow:0px 0px 0px 0px white;
     text-shadow: 0px 0px 7px blue;
 
   }
+
+  #logo{
+    position: relative;
+    top:10px;
+    font-family: "AR DESTINE", ARDESTINE;
+    font-size: 22px;
+    margin: auto;
+    margin-left: 9px;
+  }
+  #logoimg{
+    width:40px;
+    height: 40px;
+    float: left;
+    border-radius: 500px;
+    border: 2px solid transparent;
+    overflow: hidden;
+    box-shadow: 0 0 15px #99ffff;
+  }
   #beta1{
     color: white;
-    font-size: 9px;
+    font-size: 7px;
     position: relative;
-    top:-13px;
+    top:0px;
     font-style: oblique;
+    margin-left: 1px;
   }
   .heading1{
     color: #e6e6e6;
@@ -251,6 +291,7 @@ box-shadow:0px 0px 0px 0px white;
   .heading1 a{
     text-decoration: none;
     color: #e6e6e6;
+    padding-right: 3px;
     text-shadow: 0px 0px 2px #b3b3b3;
   }
   .heading1 a:hover{
@@ -377,9 +418,10 @@ box-shadow:0px 0px 0px 0px white;
     font-size: 13px;
 
   }
-  #about a{
+  #about a:{
     color:#8c8c8c;
     text-decoration: none;
+
   }
 
   #about a:hover{

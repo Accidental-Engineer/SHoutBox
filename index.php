@@ -13,13 +13,14 @@ include 'conn.php';
  $shouts=mysqli_query($conn,$q1);
   ?>
 <html>
-<header>
+<head>
 	<title>SHoutBox</title>
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css"/>
   <link rel="stylesheet" type="text/css" href="style.css"/>
+  <link rel="icon" href="shoutbox_logo_invert.png"/>
     <script src="jquery.js"></script>
     <script src="script.js"></script>
   <script>
@@ -59,12 +60,12 @@ include 'conn.php';
 }
 </script>
 </header>
-
+</head>
 	<body>
 		<div id='container'>
       <div class="head">
         <div class="heading">
-  				SHoutBox<span id='beta1' >Beta</span>
+  				<div id="logoimg"><img src="shoutbox_logo_invert.png"></div><span id="logo">SHoutBox</span><span id='beta1' >Beta</span>
   			</div>
         <div class="heading1">
           <i class="fa fa-user" aria-hidden='true'></i> <?php echo "Hi, ".$fname ?>
