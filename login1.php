@@ -1,6 +1,7 @@
 <?php
 include "session.php";
-$connect = new mysqli('localhost', 'root', '04081995@tarun', 'shoutit');
+include "conn.php";
+
 if($connect->connect_error)
 {
   echo "Couldn't connect to database.";
@@ -20,7 +21,11 @@ else
             $_SESSION['user'] = $username;
             $_SESSION['password'] = $password;
             $_SESSION['fname'] = $row['First_Name'];
+            $_SESSION['lname'] = $row['Last_Name'];
             $_SESSION['admin'] =$row['Admin'];
+            $_SESSION['email'] =$row['Email'];
+            $_SESSION['userid'] =$row['User_Id'];
+            $_SESSION['propic'] =$row['propic'];
 
             header("Location: index.php");
             exit();
@@ -29,16 +34,17 @@ else
         {
           include "login.php";
             echo "<script>
-            document.getElementById('er').innerHTML= '  Incorrect Admission no. or Password';
+            document.getElementById('er').innerHTML= '  Incorrect Admission no.';
 
 
             </script>";
         }
     }
 } else
-{include "login.php";
+{
+  include "login.php";
   echo "<script>
-document.getElementById('er').innerHTML= '  Incorrect Admission no. or Password';
+  document.getElementById('er').innerHTML= '  Incorrect Admission no. or Password';
 
 
   </script>";

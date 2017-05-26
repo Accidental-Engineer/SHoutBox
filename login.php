@@ -30,6 +30,7 @@
 
                 </form>
                 <h4 id='log'>Don't have an account?  <a href='signup.php'>Sign Up!</a></h4>
+                <h4 id='log'><a href='forgetpassword.php'>Forget Password ?</a></h4>
             </div>
 
             ";
@@ -38,6 +39,7 @@
   }
   else
   {
-    include "index.php";
+    header("Location: index.php");
+
   }
  ?>

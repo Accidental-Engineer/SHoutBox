@@ -2,7 +2,9 @@
   margin: 0px;
   padding: 0px;
 }
-
+.remove{
+  display:none;
+}
 #shouts::-webkit-scrollbar {
     width: 6px;
 }
@@ -22,14 +24,14 @@ body{
 }
 #container{
 
-  width: 60%;
+  width: 100%;
   margin: 0px auto;
-  box-shadow:0px 4px 10px 1px gray;
+
 
 }
 .head{
   background: #009688;
-  height: 70px;
+  height: 75px;
   z-index: 1;
 }
 .heading{
@@ -43,12 +45,12 @@ body{
 }
 .heading1{
   color: #e6e6e6;
-  text-align: right;
+  /*text-align: right;*/
   float: left;
-  width: 36%;
-  font-size: 15px;
-  padding-top: 7px;
-  line-height: 26px;
+  width: 40%;
+  font-size: 20px;
+  height: 75px;
+  line-height: 75px;
   padding-right: 5px;
   text-shadow: 0px 0px 2px #b3b3b3;
 
@@ -56,7 +58,7 @@ body{
 .heading1 a{
   text-decoration: none;
   color: #e6e6e6;
-  padding-right: 3px;
+  /*padding-right: 3px;*/
   text-shadow: 0px 0px 2px #b3b3b3;
 }
 .heading1 a:hover{
@@ -64,6 +66,73 @@ body{
   color: #b3e6ff;
   text-shadow: 0px 0px 5px #b3b3b3;
 }
+.headingimg{
+    height: 35px;
+    width: 35px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 6px;
+    overflow: hidden;
+    border-radius: 2px;
+}
+.hrule{
+  width: 0px;
+  height: 27px;
+  margin-top: 25px;
+  margin-bottom: 23px;
+  margin-left: 6px;
+  margin-right: 6px;
+
+  border-left: 2px solid #00665c;
+}
+.noti{
+  height: 20px;
+  width:20px;
+  margin-top: 27px;
+  margin-bottom: 28px;
+  margin-left: 6px;
+  margin-right: 6px;
+
+}
+.notidropdown{
+  background-color: white;
+    position: absolute;
+    top: 100%;
+    left: -15%;
+    width: 90%;
+    border-right: 1px solid white;
+    display: none;
+    border-radius: 2px;
+    box-shadow: 0px 9px 12px 0px #009688;
+}
+.notitriangle{
+  float: left;
+  position:absolute;
+  left: 51%;
+  top: 84%;
+  width: 0px;
+  height: 0px;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  border-bottom: 12px solid white;
+  background-color: transparent;
+  display: none;
+
+}
+.notinew{
+  animation-name: blink;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+.notiactive{
+  display: block;
+}
+.notiiconactive{
+  color: yellow;
+}
+
 #logo{
   position: relative;
   top:10px;
@@ -81,43 +150,83 @@ body{
   overflow: hidden;
   box-shadow: 0 0 15px #99ffff;
 }
+#div{
+  width: auto;
+  min-width: 1200px;
+ height: auto;
+
+}
+.bodycontainer{
+  width:55%;
+  min-width: 660px;
+  height: 100%;
+  float:left;
+   background: #e6e6e6;
+}
+#conlist{
+   background: #e6e6e6;
+  width:25%;
+  min-width: 300px;
+  float:left;
+  height:100%;
+  border-right: 1px solid #009688;
+
+}
 #shouts{
-  width: 95%;
-  height: 350px;
+
+  width: 100%;
+  height: 70%;
   overflow: auto;
-  background: #f2f2f2;
+
   margin: 0px auto;
 
 }
+#sidelist{
+  width: 19.88%;
+  min-width: 239px;
+  height: 100%;
+  float:left;
+  background:#e6e6e6;
+}
+.conarea{
+margin: 10px;
+background-color: rgba(255, 255, 255,0.6);
+border-radius: 3px;
+height: 93%;
+padding: 15px;
+font-size: 18px;
+color:#333333;
+
+}
+
 .shout{
   list-style: none;
   color: #264d00;
   padding: 15px;
-  border-bottom: 1px dotted #737373;
+  background: white;
+  border-radius: 2px;
+  margin: 10px;
+  box-shadow: 0px 1px 1px rgba(166, 166, 166,0.5);
 }
-strong{
-  color:#333333;
-}
+
 #input{
+  padding-top: 20px;
   margin: auto;
-  width: 95.2%;
+  width: 90.2%;
 
 }
 #input input[type='text']{
-
   width: 100%;
   height: 30px;
-
   padding: 5px;
-border: none;
-border-bottom: 1px solid #009688;
+  border: none;
+  border-bottom: 1px solid #009688;
 }
 #input input[type='text']:focus{
-outline: none;
-box-shadow: 0px 1px 5px  #009688;
+  outline: none;
+  box-shadow: 0px 1px 5px  #009688;
 }
 #sub{
-
   margin-top:  15px  ;
   margin-bottom: 15px;
   padding: 5px;
@@ -173,26 +282,32 @@ box-shadow: 0px 1px 5px  #009688;
   top:2px;
   font-style: oblique;
 }
+.sidepane
+{
+  font-size: 25px;
+}
+.proimg{
+  background-color: yellow;
+    width: 80px;
+    max-width: 80px;
+    height: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+    border: 2px solid rgba(191, 191, 191,1);
+    overflow: hidden;
+}
 #about{
-  text-align: center;
+
   width: 100%;
   line-height: 40px;
   height: 40px;
-  color:#b3b3b3;
-  font-size: 15px;
+  color:#333333;
+
 
 }
-#about{
-  text-align: center;
-  width: 100%;
-  line-height: 40px;
-  height: 40px;
-  color:#b3b3b3;
-  font-size: 12px;
 
-}
 #about a{
-  color:#8c8c8c;
+  color:#333333;
   text-decoration: none;
 }
 
@@ -219,6 +334,154 @@ box-shadow: 0px 1px 5px  #009688;
 #an:hover{
   text-shadow: 0px 0px 5px green;
 }
+
+
+/*Search bar Styling*/
+        #find{
+
+          width: 100%;
+          height: 30px;
+
+          padding: 5px;
+        border: none;
+        border: 1px solid #009688;
+
+        }
+        .searchdiv{
+          list-style: none;
+          color: #264d00;
+          padding: 15px;
+          background: white;
+          border-radius: 2px;
+          margin: 10px;
+          box-shadow: 0px 1px 1px rgba(166, 166, 166,0.5);
+        }
+        .icon{
+          padding: 5px;
+          height: 20px;
+          color:white;
+          background-color: #009688;
+        }
+        #find:focus{
+        outline: none;
+
+        }
+        .bar{
+          width: 89%;
+          float: left;
+        }
+        .barcontainer:hover{
+          box-shadow: 0px 0px 3px  #009688;
+        }
+        .search{
+          width: 10%;
+          float: left;
+        }
+        .dropdown{
+          background-color: white;
+           position:absolute;
+           top:30px;
+           width:100%;
+           border-right: 1px solid white;
+           display: none;
+           border-radius: 2px;
+           box-shadow: 0px 6px 12px 1px  #009688;
+
+        }
+
+        .results{
+          list-style: none;
+          background-color: rgba(0, 0, 0, 0);
+          /* padding: 4px; */
+          font-size: 20px;
+          /* margin-bottom: 1px; */
+          line-height: 40px;
+
+
+        }
+        .results:hover{
+          background-color: #009688;
+          border-right: 1px solid white;
+        }
+        .results:hover .spanfind{
+          color: white;
+
+        }
+        .spanfind{
+            color: #264d00;
+          font-size: 15px;
+          margin: 5px;
+          margin-left: 10px;
+        }
+        .conimg{
+          height: 40px;
+          width: 40px;
+          margin: 5px;
+          background: yellow;
+          border-radius: 3px;
+          overflow: hidden;
+          float: left;
+        }
+        .contactlist{
+          list-style: none;
+          color: #333333;
+          /* padding: 15px; */
+          background: white;
+          border-radius: 2px;
+          margin: 10px;
+          box-shadow: 0px 1px 1px rgba(166, 166, 166,0.5);
+          line-height: 50px;
+        }
+        .contactlist:hover{
+          cursor:pointer;
+        }
+        .active{
+          background-color: #009688;
+          color: white;
+        }
+/*End of Search Bar styling*/
+
+
+/*PROFILE PAGE STYLING*/
+        .profilepic{
+          background-color: yellow;
+          width: 200px;
+          max-width: 200px;
+          height: 200px;
+          max-height: 200px;
+          border-radius: 3px;
+          border: 2px solid rgba(191, 191, 191,1);
+          overflow: hidden;
+        }
+        .proname{
+          line-height: 40px;
+          padding-top: 10px;
+          padding-right: 10px;
+          padding-bottom: 10px;
+          font-size: 25px;
+          height: 40px;
+          color: #333333;
+        }
+        .flist{
+          list-style: none;
+          color: #264d00;
+          background: white;
+          border-radius: 2px;
+          line-height: 40px;
+
+          box-shadow: 0px 1px 1px rgba(166, 166, 166,0.5);
+        }
+        .flistimg{
+          height:30px;
+          width:30px;
+          margin: 5px;
+          background:yellow;
+          border-radius: 15px;
+          overflow: hidden;
+          float: left;
+        }
+
+/*END OF PROFILE PAGE STYLING*/
 
 @font-face{
   font-family: ARDESTINE ;
@@ -436,4 +699,14 @@ html,body{
   }
 
 
+}
+
+
+/*NOTIFICATION ANIMATIION*/
+@keyframes blink{
+                0% { color: #e6e6e6;}
+                50% { color: red;}
+                58% { color: red;}
+                90% { color: orange; }
+                100% { color: #e6e6e6;}
 }

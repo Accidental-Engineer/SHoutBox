@@ -1,4 +1,17 @@
-<?php include 'session.php' ?>
+<?php
+    include 'session.php';
+    include "conn.php";
+?>
+<?php
+
+$string='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefhijklmnopqrstuvwxyz1234567890';
+$string_shuff=str_shuffle($string);
+$uindex=substr($string_shuff,0,16);
+
+
+
+ ?>
+
 <?php
 
   if($_POST['submit'])
@@ -28,14 +41,14 @@
       }
       else
       {
-        $connect = new mysqli('localhost', 'root', '04081995@tarun', 'shoutit');
+        //$connect = new mysqli('localhost', 'root', '04081995@tarun', 'shoutit');
         if($connect->connect_error)
         {
           echo "Couldn't connect to database.";
         }
         else
         {
-          $sql = "INSERT INTO `users`(`First_Name`, `Last_Name`, `Admin`, `Password`, `Email`, `Time`, `Date`) VALUES ('$fname', '$lname', '$username', '$password', '$email', '$time', '$date')";
+          $sql = "INSERT INTO `users`(`First_Name`, `Last_Name`, `Admin`, `Password`, `Email`, `Time`, `Date`,`User_Id`) VALUES ('$fname', '$lname', '$username', '$password', '$email', '$time', '$date','$uindex')";
           if($connect->query($sql))
           {
             $_SESSION['user'] = $username;
