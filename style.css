@@ -19,6 +19,17 @@
   background-color: #009688 ;
   outline: 5px solid #009688;
 }
+.conarea::-webkit-scrollbar{
+  width: 2px;
+}
+
+.conarea::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}.conarea::-webkit-scrollbar-thumb {
+  background-color: #009688 ;
+  outline: 5px solid #009688;
+}
+
 body{
   background-color: white;
 }
@@ -86,6 +97,7 @@ body{
 
   border-left: 2px solid #00665c;
 }
+/*Notification Styling*/
 .noti{
   height: 20px;
   width:20px;
@@ -99,12 +111,13 @@ body{
   background-color: white;
     position: absolute;
     top: 100%;
-    left: -15%;
-    width: 90%;
+    left: -60%;
+    width: 160%;
     border-right: 1px solid white;
     display: none;
     border-radius: 2px;
     box-shadow: 0px 9px 12px 0px #009688;
+        z-index: 1;
 }
 .notitriangle{
   float: left;
@@ -132,7 +145,70 @@ body{
 .notiiconactive{
   color: yellow;
 }
+.notiresults{
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0);
+  /* padding: 4px; */
+  font-size: 20px;
+  /* margin-bottom: 1px; */
+  line-height: 40px;
 
+
+}
+/*.notiresults:hover{
+  background-color: #009688;
+  border-right: 1px solid white;
+}
+.notiresults:hover .spanfind{
+  color: white;
+
+}*/
+.notidiv{
+  width: 100%;
+  height: 40px;
+  text-shadow: none;
+}
+.notiimg{
+  height:30px;
+  width:30px;
+  margin: 5px;
+  background:yellow;
+  border-radius: 15px;
+  overflow: hidden;
+  float: left;
+
+}
+
+.notidivtext{
+  float: left;
+  width:45%;
+}
+.notidivbut{
+  float: left;
+}
+.notibut{
+  margin-left: 10px;
+  float: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 60px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 2px;
+
+}
+.confirm{
+  background:#009688;
+  color: white;
+}
+.delete{
+  border: 1px solid #009688;
+  color: #009688;
+}
+/*End Of notification Styling*/
 #logo{
   position: relative;
   top:10px;
@@ -177,7 +253,7 @@ body{
   width: 100%;
   height: 70%;
   overflow: auto;
-
+    overflow-x: hidden;
   margin: 0px auto;
 
 }
@@ -192,10 +268,12 @@ body{
 margin: 10px;
 background-color: rgba(255, 255, 255,0.6);
 border-radius: 3px;
-height: 93%;
+height: 83%;
+max-height: 83%;
 padding: 15px;
 font-size: 18px;
 color:#333333;
+overflow-y: auto;
 
 }
 
@@ -480,7 +558,23 @@ color:#333333;
           overflow: hidden;
           float: left;
         }
+        .request{
 
+          width: 50%;
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-top: 7px;
+          padding-bottom:7px;
+          line-height: 100%;
+          border: 1px solid #009688;
+        }
+        .request:hover{
+          background-color:#009688;
+          border: 1px solid transparent;
+          color: white;
+          box-shadow: 1px 1px 10px #009688;
+          cursor: pointer;
+        }
 /*END OF PROFILE PAGE STYLING*/
 
 @font-face{

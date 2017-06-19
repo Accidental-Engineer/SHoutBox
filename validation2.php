@@ -2,6 +2,10 @@
 include("conn.php");
 $value = $_GET['query'];
 $formfield = $_GET['field'];
+//$value1 = $_POST['query'];
+//$formfield1 = $_POST['field'];
+session_start();
+$captcha=$_SESSION['secure'];
 
 //Check Valid or Invalid user name when user enters user name in username input field.
 
@@ -42,5 +46,14 @@ if ($formfield == "username") {
 
         echo "<span>Valid</span>";}
     }
+}
+if ($formfield == "captcha") {
+  if ($value==$captcha) {
+     echo "1";
+  }
+  else{
+    //echo $captcha." ";
+    echo "0 ".$captcha;
+  }
 }
 ?>

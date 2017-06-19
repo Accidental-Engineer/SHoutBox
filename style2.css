@@ -5,42 +5,82 @@
 
 
 .innerdiv{
-    width:65%;
+    width:100%;
+    text-align: center;
+    margin:0px;
+    overflow: hidden;
 
-    margin:50px auto;
 
 }
+.header_container{
+  margin-top:0px;
+  color:white;
+  background-color:#009688;
+  height: 75px;
 
+
+}
+.header{
+  float: left;
+  height: 75px;
+}
+.left{
+  width: 70%;
+}
+.right{
+  width: 30%;
+}
+
+#logoimg{
+  width:40px;
+  height: 40px;
+  margin-top: 17px;
+  margin-left: 50px;
+  border-radius: 40px;
+  border: 2px solid transparent;
+  overflow: hidden;
+  box-shadow: 0 0 15px #99ffff;
+
+}
+.header_login{
+  margin: 20px;
+  margin-left: 58%;
+  width: 100px;
+  height: 35px;
+  background: rgba(255, 192, 203, 0.51);
+  border-radius: 3px;
+  line-height: 35px;
+}
 form{
   font-family : Verdana,sans-serif;
-    background-color:white;
+    background-color:rgba(102,93,17,0);
     color:#009688;
-    box-shadow:0px 4px 10px 1px gray;
-    width:500px;
-    margin: 0px auto;
-
-
-    padding:10px;
+    /*box-shadow:0px 4px 10px 1px gray;*/
+    width:100%;
+    margin: 0px;
 }
 
+
+
 h3{
-    margin-top:0px;
+
     color:white;
-    background-color:#009688;
     text-align:center;
+    font-family: arial;
+    font-weight: lighter;
     width:100%;
-    height:50px;
-    padding-top:30px;
+
 }
 
 input{
-    width:250px;
+    width:100%;
     height:30px;
     margin-top:10px;
     border-radius:3px;
-    padding:2px;
-
-    margin:10px;
+    padding: 8px;
+}
+.name{
+  width: 49%;
 }
 .in{
   border: none;
@@ -76,8 +116,9 @@ span{
 }
 
 #myForm div{
-    color:red;
-    font-size:9px;
+  color:red;
+  width: 100%;
+  font-size: 11px;
 }
 
 #formget{
@@ -90,6 +131,8 @@ table{
 }
 .la{
   color:#4d4d4d;
+  font-weight: bold;
+font-size: 14px;
 }
 #welcome{
 
@@ -99,10 +142,7 @@ table{
   color: #009688;
   text-shadow: 0 0 1px #009688;
 }
-.innerdiv{
-    text-align: center;
 
-}
 #log{
   margin-top: 10px;
   font-size: 15px;
@@ -118,14 +158,95 @@ table{
 }
 .error{
   height: 20px;
-  width: 50px;
-  font-size: 10px;
+  font-size: 11px;
 }
 #beta{
   font-size: 8px;
   position: relative;
   top:-17px;
   font-style: oblique;
+}
+/*BODY*/
+.body{
+  height: 150%;
+      min-height: 950px;
+  position: relative;
+}
+.upperheader{
+
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+
+
+}
+.bodymaincontainer{
+  margin-left: 10%;
+  margin-right: 10%;
+  position: relative;
+  height: calc(100% - 100px);
+  background: white;
+}
+.upperheader h1{
+  font-family: 'Open Sans', arial;
+  font-weight: lighter;
+  font-size: 38px;
+  color: #555;
+
+}
+.bodymain{
+  float:left;
+  padding-top: 50px;
+  height: 75%;
+}
+.bodymainleft{
+  width:60%;
+
+  text-align: center;
+  font-family: 'Open Sans', arial;
+  font-weight: lighter;
+  font-size: 22px;
+  color: #555;
+}
+.bodymain_text{
+  font-family: 'Open Sans', arial;
+  font-weight: lighter;
+  line-height: 50px;
+  font-size: 16px;
+  color: #555;
+}
+.shoutboximg_container{
+  padding-top: 50px;
+  margin: auto;
+  padding-left: 200px;
+}
+.shoutboximg{
+  float: left;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.bodymainright{
+width: 40%;
+background: orange;
+box-shadow: 0 0 5px orange;
+}
+.footer{
+  background: rgba(127,208,35,.66);
+  width: 100%;
+
+}
+.fa:hover{
+  cursor: pointer;
+}
+/* END BODY*/
+
+@font-face{
+  font-family: 'Open Sans' ;
+  src:url(fonts/OpenSans-Light.ttf);
 }
 @media screen and (max-width: 768px) {
   *{

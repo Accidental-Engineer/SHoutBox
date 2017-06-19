@@ -7,11 +7,13 @@ var lname = document.getElementById("lname1").value;
     var password = document.getElementById("password1").value;
     var email = document.getElementById("email1").value;
     var repass = document.getElementById("repass1").value;
-
+    var captcha = document.getElementById("captcha1").value;
+    var check;
 //Check input Fields Should not be blanks.
-    if (fname=='' || lname=='' || uname == '' || password == '' || email == '' || repass == '')
+    if (fname=='' || lname=='' || uname == '' || password == '' || email == '' || repass == '' || captcha == '')
     {
         alert("All Fields Are Mandatory.");
+        return false;
     }
 
     else
@@ -36,11 +38,11 @@ var lname = document.getElementById("lname1").value;
         }
         else
         {
-		//Submit Form When All values are valid.
-            return true;
-            document.getElementById("myForm").submit();
-        }
+        //  document.getElementById('captcha').innerHTML="";
+          return true;
+          document.getElementById("myForm").submit();
     }
+  }
 }
 
 //AJAX Code to check  input field values when onblur event triggerd.
@@ -114,20 +116,21 @@ document.getElementById('repass').innerHTML = "";
 
 
 }
-//fcaebook integation
-window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1918027238432498',
-      xfbml      : true,
-      version    : 'v2.8'
-    });
-    FB.AppEvents.logPageView();
-  };
+function newcaptcha(){
+  var dataString = 'index=1';
+  $.ajax({
+     type: "POST",
+     url: "generatecaptcha.php",
+     data: dataString,
+     cache: false,
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+     success: function(html) {
+        if (html!=1){
+         document.getElementById('divcaptcha').innerHTML = html;
+
+       }
+
+  }
+
+ });
+}
