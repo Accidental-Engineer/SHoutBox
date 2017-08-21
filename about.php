@@ -17,9 +17,6 @@ include "session.php";
         <div id="logoimg" ><img src="shoutbox_logo_invert.png"></div><span id="logo" style="position:relative; top:-2px;">SHoutBox</span><span id='beta1' style="position:relative; top:-10px;">Beta</span>
       </div>
       <div class="heading1">
-        <i class="fa fa-user" aria-hidden='true'></i> <?php echo "Hi, ".$fname ?>
-        <br>
-      <a href = "logout.php"><i class='fa fa-sign-out' aria-hidden='true'></i> Logout</a>
       </div>
     </div>
     <div id="body"><h2>About The Project</h2><br>
@@ -36,7 +33,7 @@ number and email-id to join the chat going on. The best thing about this chat-bo
 </p><br></div>
 <div id="dev"><h2>About The Developers</h2><br>
 
-<div class="d1"><div class="img"><img src="tarun.jpg" width="100px"></div><div class="d2"><span class="contact">Tarun Kumar</span>, pursuing B.Tech in Petroleum Engineering from IIT(ISM) Dhanbad, is passionate about programming and designing. He has good hands at CSS3, including animation and media-query. His programming skills include C, C++, Python and Java.<br><span class="contact">Contact: tarun12.tarunkr@gmail.com</span></div>
+<div class="d1"><div class="img"><img src="tarun.jpg" width="100px"></div><div class="d2"><span class="contact">Tarun Kumar</span>, pursuing B.Tech in Petroleum Engineering from IIT(ISM) Dhanbad, is passionate about Web Development and designing. He has good hands at CSS3, PHP and jQuery. His programming skills include C, C++, Python and Java.<br><span class="contact">Contact: tarun12.tarunkr@gmail.com</span></div>
 <br></div>
 <div class="d1"><div class="img"><img src="shivam.jpg" width="100px"></div><div class="d2"><span class="contact">Shivam Kumar</span>, pursuing Integrated M. Tech in Mathematics & Computing from IIT(ISM) Dhanbad, has keen interest in Web Development. He has good hands at JavaScript, PHP and MySQL and programming expertise in C and C++.<br><span class="contact">Contact: skshivam64@gmail.com</span></div>
 </div>
