@@ -59,12 +59,15 @@ $uindex=substr($string_shuff,0,16);
           $sql = "INSERT INTO `users`(`First_Name`, `Last_Name`, `Admin`, `Password`, `Email`, `Time`, `Date`,`User_Id`) VALUES ('$fname', '$lname', '$username', '$password', '$email', '$time', '$date','$uindex')";
           if($connect->query($sql))
           {
-            $_SESSION['user'] = $username;
+              $_SESSION['user'] = $username;
               $_SESSION['password'] = $password;
               $_SESSION['fname'] = $fname;
+              $_SESSION['userid'] =$uindex;
+              $_SESSION['email']=$email;
+              $_SESSION['e_veri']=0;
 
               echo "<script>alert('Ýou have been reistered successfully!');</script>";
-              header("Location: index.php");
+              header("Location: confirmation.php");
               exit();
 
           }

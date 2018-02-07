@@ -26,9 +26,15 @@ else
             $_SESSION['email'] =$row['Email'];
             $_SESSION['userid'] =$row['User_Id'];
             $_SESSION['propic'] =$row['propic'];
-
+            $_SESSION['e_veri']=$row['email_verify'];
+            if($_SESSION['e_veri']==1){
             header("Location: index.php");
             exit();
+            }
+            else{
+              header("Location: confirmation.php");
+              exit();
+            }
         }
         else
         {

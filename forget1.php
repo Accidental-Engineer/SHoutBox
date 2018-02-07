@@ -1,13 +1,9 @@
-
  <?php
-
-
      include "conn.php";
      $password = ($_POST['password']);
      $repassword = $_POST['repass'];
      $id=$_POST['id'];
      //echo $id;
-
      date_default_timezone_set('Asia/Kolkata');
      $time=date('H:i:s a',time());
      $date=date('Y-m-d',time());
@@ -19,7 +15,6 @@
      }
      else
      {
-
          //$connect = new mysqli('localhost', 'root', '04081995@tarun', 'shoutit');
          if($connect->connect_error)
          {
@@ -44,7 +39,4 @@
          $connect->close();
 
      }
-
-
-
   ?>
