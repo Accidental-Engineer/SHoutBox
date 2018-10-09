@@ -1,2 +1,2 @@
 # SHoutBox
-** ShoutBox is a chatting application **
+**ShoutBox is a chatting application**
